@@ -4,13 +4,17 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FlappyBird"
+        KeyDown="Window_KeyDown"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Canvas Name="cnv_menu" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <Button Content="Normál" x:Name="btn_normal" Height="50" Width="150" Canvas.Left="-325" Canvas.Top="-25"/>
+        <Canvas x:Name="cnv_menu" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button Content="Normál" x:Name="btn_normal" Height="50" Width="150" Canvas.Left="-325" Canvas.Top="-25" Click="btn_normal_Click"/>
             <Button Content="Esős" x:Name="btn_esos" Height="50" Width="150" Canvas.Left="-75" Canvas.Top="-25"/>
             <Button Content="Ködös" x:Name="btn_kod" Height="50" Width="150" Canvas.Left="175" Canvas.Top="-25"/>
+        </Canvas>
+        <Canvas x:Name="cnv_normal" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="Hidden">
+            <Button x:Name="bird" Height="50" Width="50" Canvas.Left="-325" Canvas.Top="-100"/>
         </Canvas>
     </Grid>
 </Window>
